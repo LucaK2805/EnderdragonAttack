@@ -121,4 +121,4 @@ Installation
 To use it, you also have to provide a Lobby and GameWorld. The GameWorld will be created by the Plugin, 
 with copying the ExampleWorld, which has to be provided be the Server.
 
-A Lobby and ExampleWorld is provided in the "World" Folder.
+A Lobby and ExampleWorld is provided in the plugin resources.
