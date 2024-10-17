@@ -1,0 +1,116 @@
+name: Enderdragonattack
+version: '1.0'
+main: gamemode.enderdragonattack.Core
+api-version: '1.20'
+description: A comprehensive plugin for managing the Enderdragon Attack game mode, featuring a level system, economy, perks, kits, and more.
+
+commands:
+  level:
+    description: Display your current level and experience status.
+    usage: /level
+    aliases: [lvl]
+    permission: enderdragonattack.use
+
+  addExperience:
+    description: Add experience to a specified player.
+    usage: /addExperience <player> <amount>
+    permission: enderdragonattack.admin
+
+  setExperience:
+    description: Set experience for a specified player.
+    usage: /setExperience <player> <amount>
+    permission: enderdragonattack.admin
+
+  removeExperience:
+    description: Remove experience from a specified player.
+    usage: /removeExperience <player> <amount>
+    permission: enderdragonattack.admin
+
+  enderdragon:
+    description: Stop the game while it is running.
+    usage: /enderdragon stop
+    aliases: [ed]
+    permission: enderdragonattack.admin
+
+  setcoins:
+    description: Set coins for a player.
+    usage: /setcoins <player> <amount>
+    aliases: [sc]
+    permission: enderdragonattack.playerdata
+
+  addcoins:
+    description: Add coins to a player.
+    usage: /addcoins <player> <amount>
+    aliases: [ac]
+    permission: enderdragonattack.playerdata
+
+  removecoins:
+    description: Remove coins from a player.
+    usage: /removecoins <player> <amount>
+    aliases: [rc]
+    permission: enderdragonattack.playerdata
+
+  worldteleport:
+    description: Teleport to a specific world.
+    usage: /worldteleport <world>
+    aliases: [wt]
+    permission: enderdragonattack.admin
+
+  list:
+    description: List players in the starting zone.
+    usage: /list
+    permission: enderdragonattack.playerdata
+
+  resetworld:
+    description: Reset the GameWorld to its initial state.
+    usage: /resetworld
+    aliases: [rw]
+    permission: enderdragonattack.admin
+
+  stats:
+    description: Show the stats of a player.
+    usage: /stats [player]
+    permission: enderdragonattack.use
+
+  setperk:
+    description: Give or remove a perk from a player.
+    usage: /perk <give|remove> <player> <perkName>
+    permission: enderdragonattack.admin
+
+  perk:
+    description: Open the perk shop menu.
+    usage: /perk
+    permission: enderdragonattack.use
+
+  top:
+    description: Show the top leaderboards in one of 3 categories.
+    usage: /top <Damage|Level|Games>
+    permission: enderdragonattack.use
+
+  rank:
+    description: Display your current rank based on your level.
+    usage: /rank
+    permission: enderdragonattack.use
+
+  kit:
+    description: Open the kit shop menu.
+    usage: /kit
+    permission: enderdragonattack.use
+
+  kitstart:
+    description: Open the kit selection menu for the game start.
+    usage: /kitstart
+    permission: enderdragonattack.use
+
+permissions:
+  enderdragonattack.use:
+    description: Allows access to basic Enderdragon Attack commands.
+    default: true
+
+  enderdragonattack.admin:
+    description: Allows access to administrative commands for Enderdragon Attack.
+    default: op
+
+  enderdragonattack.playerdata:
+    description: Allows access to player data management commands for Enderdragon Attack.
+    default: op
